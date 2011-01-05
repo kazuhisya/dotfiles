@@ -18,7 +18,7 @@ hardstatus alwayslastline
 hardstatus string "[%m/%d %02c] %`%-w%{=b bw}%n %t%{-}%+w %=%{ak}$USER@$HOSTNAME[$LANG] "
 
 
-# ターミナル
+# terminal
 #term xterm-256color
 term xterm
 
