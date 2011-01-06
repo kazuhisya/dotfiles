@@ -1,4 +1,4 @@
-" /etc/vimrc (configuration file for vim only)
+" vimrc (configuration file for vim only)
 
 " enable syntax highlighting
 syntax on
