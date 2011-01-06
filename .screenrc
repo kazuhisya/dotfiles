@@ -14,9 +14,8 @@ defscrollback 1000
 # Statusbar
 hardstatus on
 hardstatus alwayslastline
-#hardstatus string "%{= gk}[%m/%d %02c] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] "
-hardstatus string "[%m/%d %02c] %`%-w%{=b bw}%n %t%{-}%+w %=%{ak}$USER@$HOSTNAME[$LANG] "
-
+hardstatus string "%{= gk}[%m/%d %02c] %{gW} %-w%{= wk}%n %t%{-}%+w %=%{gk}$USER@$HOSTNAME[$LANG] "
+#hardstatus string "[%m/%d %02c] %`%-w%{=b bw}%n %t%{-}%+w %=%{ak}$USER@$HOSTNAME[$LANG] "
 
 # terminal
 #term xterm-256color
@@ -41,4 +40,7 @@ defencoding utf-8
 # title(need .bashrc setting)
 # bashrc => PS1='\033k\033\\\[\033[36m\][\u@\h \W]$\[\033[0m\] '
 shelltitle "$ |bash"
+
+# deletes by a present background color
+defbce on
 
