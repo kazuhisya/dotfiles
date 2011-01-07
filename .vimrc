@@ -196,13 +196,13 @@ set autoindent
 
 " The null character is inserted instead of the tab.
 set expandtab
-set softtabstop=4 
-set tabstop=4
+set softtabstop=2 
+set tabstop=2
 
 " When Tab is driven in the blank at the head of line,
 " only the number of 'Shiftwidth' does the indent. 
 set smarttab
-set shiftwidth=4
+set shiftwidth=2
 
 " incremental search
 set incsearch
@@ -239,3 +239,35 @@ set ambiwidth=double
 " Persistent undo
 set undofile
 set undodir=~/.vimundo
+
+" StatusLine color Settings
+let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=white ctermbg=blue cterm=none'
+
+if has('syntax')
+  augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:StatusLine('Enter')
+    autocmd InsertLeave * call s:StatusLine('Leave')
+  augroup END
+endif
+
+let s:slhlcmd = ''
+function! s:StatusLine(mode)
+  if a:mode == 'Enter'
+    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+    silent exec g:hi_insert
+  else
+    highlight clear StatusLine
+    silent exec s:slhlcmd
+  endif
+endfunction
+
+function! s:GetHighlight(hi)
+    redir => hl
+    exec 'highlight '.a:hi
+    redir END
+    let hl = substitute(hl, '[\r\n]', '', 'g')
+    let hl = substitute(hl, 'xxx', '', '')
+    return hl
+endfunction
+
