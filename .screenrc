@@ -44,3 +44,5 @@ shelltitle "$ |bash"
 # deletes by a present background color
 defbce on
 
+# output color
+sorendition "+rb .G"
