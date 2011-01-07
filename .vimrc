@@ -196,13 +196,12 @@ set autoindent
 
 " The null character is inserted instead of the tab.
 set expandtab
-set softtabstop=2 
-set tabstop=2
+set tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " When Tab is driven in the blank at the head of line,
 " only the number of 'Shiftwidth' does the indent. 
 set smarttab
-set shiftwidth=2
 
 " incremental search
 set incsearch
