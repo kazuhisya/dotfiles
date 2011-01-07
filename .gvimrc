@@ -3,7 +3,9 @@
 " font
 "set guifont=Consolas:h11:cANSI
 "set guifontwide=MS_Gothic:h11:cSHIFTJIS
-set guifontset=Consolas:h12
+"set guifontset=Consolas:h12
+"set guifontset=a14,r14,k14
+set guifont=Monospace\ 11
 set linespace=1
 
 " hide gui menu
