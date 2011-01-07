@@ -19,3 +19,8 @@ augroup InsertHook
     autocmd InsertEnter * highlight StatusLine guifg=#ccdc90 guibg=#2E4340
     autocmd InsertLeave * highlight StatusLine guifg=#2E4340 guibg=#ccdc90
 augroup END
+
+" cursor color change for IME status
+if has('multi_byte_ime') || has('xim')
+    highlight CursorIM guibg=Purple guifg=NONE
+endif
