@@ -270,3 +270,6 @@ function! s:GetHighlight(hi)
     return hl
 endfunction
 
+filetype on
+filetype indent on
+filetype plugin on
