@@ -9,7 +9,14 @@ fi
 alias vi='vim'
 alias la='ls -la'
 alias wget='wget -c'
+alias grep='grep --color'
 
+# for fedora(Stable)
+alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source --source'
+# for fedora(UnStable)
+#alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-testing-source --source'
+# for ScientificLinux with EPEL
+#alias yumdownloader_src='yumdownloader --enablerepo=epel-source,sl-source --source'
 
 # PS1 setting
 if [ "$GDMSESSION" = "gnome" ];then
