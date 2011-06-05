@@ -1,0 +1,11 @@
+[user]
+    name = Kazuhisa Hara
+    email = kazuhisya@gmail.com
+[color]
+    ui = true
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[http]
+	sslVerify = false
