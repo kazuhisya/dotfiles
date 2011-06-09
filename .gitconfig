@@ -8,4 +8,4 @@
     branch = auto
     interactive = auto
 [http]
-	sslVerify = false
+    sslVerify = false
