@@ -1,6 +1,12 @@
 # termcapinfo
-termcapinfo xterm* G0:is=\E[?4l\E>:ti@:te@
-termcapinfo linux me=\E[m:AX
+#termcapinfo xterm* G0:is=\E[?4l\E>:ti@:te@
+#termcapinfo xterm* ti@:te@
+#termcapinfo xterm ti@:te@
+#termcapinfo linux me=\E[m:AX
+#term xterm-256color
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+
 
 # When Hang-up, ato detach
 autodetach on
@@ -51,3 +57,4 @@ sorendition "+rb .G"
 logfile $HOME/.screen/screenlog.%n-%H-%y%m%d-%c:%s-%t
 log on
 deflog on
+
