@@ -1,13 +1,16 @@
 [user]
-    name = Kazuhisa Hara
-    email = kazuhisya@gmail.com
+	name = Kazuhisa Hara
+	email = kazuhisya@gmail.com
 [color]
-    ui = true
+	ui = true
     diff = auto
     status = auto
     branch = auto
     interactive = auto
-[http]
-    sslVerify = false
 [core]
-    editor = vim -c \"set fenc=utf-8\"
+	editor = vim -c \"set fenc=utf-8\"
+[alias]
+    st = status
+    up = pull --rebase
+    ci = commit -a
+    gr = log --graph
