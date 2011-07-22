@@ -10,6 +10,7 @@ alias vi='vim'
 alias la='ls -la'
 alias wget='wget -c'
 alias grep='grep --color'
+alias date='LANG=en date'
 
 # for fedora(Stable)
 alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source --source'
