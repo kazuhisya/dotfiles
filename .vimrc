@@ -2,6 +2,7 @@
 
 " enable syntax highlighting
 syntax on
+set synmaxcol=500
 
 " show cursor line and column in the status line
 set ruler
@@ -273,3 +274,16 @@ endfunction
 filetype on
 filetype indent on
 filetype plugin on
+
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+
+" colorscheme
+set t_Co=256
+colorscheme molokai
+
+" space or line breaks to stand out
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+highlight link ZenkakuSpace Error
+match ZenkakuSpace /　/
