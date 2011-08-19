@@ -14,3 +14,5 @@
     up = pull --rebase
     ci = commit -a
     gr = log --graph
+    br = branch
+    co = checkout
