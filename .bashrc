@@ -2,7 +2,7 @@
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
 # User specific aliases and functions
@@ -48,5 +48,5 @@ else
     alias rm='rm -i'
     alias cp='cp -i'
     alias mv='mv -i'
-    export PS1="\[\033[31m\][\u@\h \W]\$\[\033[0m\] "
+    export PS1="\[\033[31m\][\u@\h \W]#\[\033[0m\] "
 fi
