@@ -177,16 +177,16 @@ endif
 map! <Esc>[3~ <Delete>
 map  <ESC>[3~    x
 
-" Only do this part when compiled with support for autocommands. 
-if has("autocmd") 
-  " When editing a file, always jump to the last known cursor position. 
-  " Don't do it when the position is invalid or when inside an event handler 
-  " (happens when dropping a file on gvim). 
-  autocmd BufReadPost * 
-    \ if line("'\"") > 0 && line("'\"") <= line("$") | 
-    \   exe "normal g`\"" | 
-    \ endif 
- 
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  autocmd BufReadPost *
+    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal g`\"" |
+    \ endif
+
 endif " has("autocmd")
 
 " that it potentially can open for malicious users to do harmful things.
@@ -201,7 +201,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " When Tab is driven in the blank at the head of line,
-" only the number of 'Shiftwidth' does the indent. 
+" only the number of 'Shiftwidth' does the indent.
 set smarttab
 
 " incremental search
@@ -285,6 +285,7 @@ colorscheme molokai
 
 " space or line breaks to stand out
 set list
-set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
