@@ -19,7 +19,7 @@ set esckeys
 " get easier to use and more user friendly vim defaults
 set nocompatible
 
-" allow backspacing over everything in insert mode 
+" allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
 " Try to get the correct main terminal type
@@ -213,12 +213,12 @@ set hlsearch
 " Highlight of parentheses
 set showmatch
 
-" When retrieving it, capital letters and small letters are disregarded. 
+" When retrieving it, capital letters and small letters are disregarded.
 " (ignorecase -> Disregard ,noignorecase -> NOT Disregard )
 set ignorecase
 
 " When the capital letter is included in the retrieval,
-" large/smallness is distinguished. 
+" large/smallness is distinguished.
 set smartcase
 
 " Advanced automatic indenting
@@ -235,7 +235,7 @@ set fileencodings=utf-8,ucs-bom,iso-2022-jp-3,iso-2022-jp,eucjp-ms,euc-jisx0213,
 
 " Special character measures
 set ambiwidth=double
- 
+
 " Persistent undo
 set undofile
 set undodir=~/.vimundo
@@ -289,3 +289,9 @@ set list
 set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
 highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
+
+" remove white space at the end-of when you save
+autocmd BufWritePre * :%s/\s\+$//ge
+" converting spaces to tab when you save
+autocmd BufWritePre * :%s/\t/  /ge
+
