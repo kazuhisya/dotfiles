@@ -24,8 +24,8 @@ alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source
 # PS1 setting
 
 # Loading git-completion
-# for Fedora15
-source /usr/share/doc/git-1.7.6.4/contrib/completion/git-completion.bash
+# for Fedora16
+source /usr/share/doc/git-1.7.7/contrib/completion/git-completion.bash
 # for RHEL6
 #source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
 
@@ -34,7 +34,7 @@ if [[ ${EUID} -ne 0 ]] ; then
         #  # Gnome On
         if [ $SHLVL = 3 ];then
             # Gnome + screen
-            export PS1='\033k\033\\\[\033[36m\][\u@\h \W$(__git_ps1)]$\[\033[0m\] '
+            export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # Gnome + bash
             export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
@@ -43,7 +43,7 @@ if [[ ${EUID} -ne 0 ]] ; then
         # Gnome Off
         if [ $SHLVL = 2 ];then
             # CLI + screen
-            export PS1='\033k\033\\\[\033[36m\][\u@\h \W$(__git_ps1)]$\[\033[0m\] '
+            export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # CLI + bash
             export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
