@@ -58,3 +58,6 @@ else
     export PS1="\[\033[31m\][\u@\h \W]#\[\033[0m\] "
 fi
 
+# less color hilite
+export LESS='-R'
+export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
