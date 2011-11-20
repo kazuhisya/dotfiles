@@ -25,11 +25,7 @@ alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source
 
 # Loading git-completion
 # for Fedora16
-<<<<<<< HEAD
 source /usr/share/doc/git-1.7.7.3/contrib/completion/git-completion.bash
-=======
-source /usr/share/doc/git-1.7.7/contrib/completion/git-completion.bash
->>>>>>> df2357578c74d6c95ddd7dd67cfdafc92db7cdc3
 # for RHEL6
 #source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
 
