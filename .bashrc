@@ -9,7 +9,7 @@ fi
 alias vi='vim'
 alias la='ls -la'
 alias wget='wget -c'
-alias grep='grep --color'
+alias grep='grep --color=always'
 alias date='LANG=en date'
 export EDITOR=vim
 
@@ -25,7 +25,11 @@ alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source
 
 # Loading git-completion
 # for Fedora16
+<<<<<<< HEAD
 source /usr/share/doc/git-1.7.7.3/contrib/completion/git-completion.bash
+=======
+source /usr/share/doc/git-1.7.7/contrib/completion/git-completion.bash
+>>>>>>> df2357578c74d6c95ddd7dd67cfdafc92db7cdc3
 # for RHEL6
 #source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
 
@@ -34,7 +38,7 @@ if [[ ${EUID} -ne 0 ]] ; then
         #  # Gnome On
         if [ $SHLVL = 3 ];then
             # Gnome + screen
-            export PS1='\033k\033\\\[\033[36m\][\u@\h \W$(__git_ps1)]$\[\033[0m\] '
+            export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # Gnome + bash
             export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
@@ -43,7 +47,7 @@ if [[ ${EUID} -ne 0 ]] ; then
         # Gnome Off
         if [ $SHLVL = 2 ];then
             # CLI + screen
-            export PS1='\033k\033\\\[\033[36m\][\u@\h \W$(__git_ps1)]$\[\033[0m\] '
+            export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # CLI + bash
             export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
@@ -58,3 +62,6 @@ else
     export PS1="\[\033[31m\][\u@\h \W]#\[\033[0m\] "
 fi
 
+# less color hilite
+export LESS='-R'
+export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
