@@ -13,6 +13,7 @@
     st = status
     up = pull --rebase
     ci = commit -a
-    gr = log --graph
+    gr = log --graph --decorate
+    ol = log --decorate --oneline --graph
     br = branch
     co = checkout
