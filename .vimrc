@@ -295,3 +295,7 @@ autocmd BufWritePre * :%s/\s\+$//ge
 " converting spaces to tab when you save
 autocmd BufWritePre * :%s/\t/  /ge
 
+" Enable mouse mode
+set mouse=a
+" Enable mouse mode for screen
+set ttymouse=xterm2
