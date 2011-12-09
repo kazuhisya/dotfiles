@@ -68,6 +68,6 @@ export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
 #alias ls='ls --color'
 #alias yum='/usr/bin/apt-cyg -u'
 #source  /etc/bash_completion.d/git
-#export PS1="\[\033[36m\][\u@\h \[\033[0m\]\[\033[33m\]\w\[\033[0m\]\[\033[36m\]\$(__git_ps1)]\[\033[0m\]\n$ "
+#export PS1="\[\033[32m\][\u@\h \[\033[0m\]\[\033[33m\]\w\[\033[0m\]\[\033[32m\]\$(__git_ps1)]\[\033[0m\]\n$ "
 #export TERM=xterm-color
 #export PATH=$PATH:$HOME/bin
