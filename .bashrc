@@ -37,7 +37,8 @@ if [[ ${EUID} -ne 0 ]] ; then
             export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # Gnome + bash
-            export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
+            # export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
+            export PS1="\[\033[36m\][\u@\h \[\033[0m\]\[\033[33m\]\W\[\033[0m\]\[\033[36m\]\$(__git_ps1)]$\[\033[0m\] "
         fi
     else
         # Gnome Off
@@ -46,7 +47,8 @@ if [[ ${EUID} -ne 0 ]] ; then
             export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
         else
             # CLI + bash
-            export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
+            #export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
+            export PS1="\[\033[36m\][\u@\h \[\033[0m\]\[\033[33m\]\W\[\033[0m\]\[\033[36m\]\$(__git_ps1)]$\[\033[0m\] "
         fi
     fi
     PATH="$PATH":${HOME}/.cabal/bin
@@ -61,7 +63,6 @@ fi
 # less color hilite
 export LESS='-R'
 export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
-
 # for cygwin
 #alias ls='ls --color'
 #alias yum='/usr/bin/apt-cyg -u'
