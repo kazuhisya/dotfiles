@@ -296,6 +296,6 @@ autocmd BufWritePre * :%s/\s\+$//ge
 autocmd BufWritePre * :%s/\t/  /ge
 
 " Enable mouse mode
-set mouse=a
+" set mouse=a
 " Enable mouse mode for screen
-set ttymouse=xterm2
+" set ttymouse=xterm2
