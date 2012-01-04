@@ -58,3 +58,6 @@ logfile $HOME/.screen/screenlog.%n-%H-%y%m%d-%c:%s-%t
 log on
 deflog on
 
+# for cygwin
+#shell /usr/bin/bash
+
