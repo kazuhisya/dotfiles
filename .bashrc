@@ -12,6 +12,7 @@ alias wget='wget -c'
 alias grep='grep --color=always'
 alias date='LANG=en date'
 export EDITOR=vim
+export GREP_OPTIONS="--color=always"
 
 # for fedora(Stable)
 alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source --source'
