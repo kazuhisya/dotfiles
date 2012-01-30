@@ -9,7 +9,6 @@ fi
 alias vi='vim'
 alias la='ls -la'
 alias wget='wget -c'
-alias grep='grep --color=always'
 alias date='LANG=en date'
 export EDITOR=vim
 export GREP_OPTIONS="--color=always"
