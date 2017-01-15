@@ -199,6 +199,8 @@ set autoindent
 set expandtab
 set tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au BufNewFile,BufRead *.md :set filetype=markdown
+au BufNewFile,BufRead Dockerfile* :set filetype=dockerfile
 
 " When Tab is driven in the blank at the head of line,
 " only the number of 'Shiftwidth' does the indent.
@@ -291,11 +293,13 @@ highlight link ZenkakuSpace Error
 match ZenkakuSpace /　/
 
 " remove white space at the end-of when you save
-autocmd BufWritePre * :%s/\s\+$//ge
+"autocmd BufWritePre * :%s/\s\+$//ge
 " converting spaces to tab when you save
-autocmd BufWritePre * :%s/\t/  /ge
+"autocmd BufWritePre * :%s/\t/  /ge
 
 " Enable mouse mode
 " set mouse=a
+" Disable mouse mode
+set mouse-=a
 " Enable mouse mode for screen
 " set ttymouse=xterm2
