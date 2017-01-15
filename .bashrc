@@ -9,9 +9,12 @@ fi
 alias vi='vim'
 alias la='ls -la'
 alias wget='wget -c'
+alias grep='grep --color=always'
 alias date='LANG=en date'
+alias dnf='sudo dnf'
+alias yum='sudo dnf'
+alias systemctl='sudo systemctl'
 export EDITOR=vim
-export GREP_OPTIONS="--color=always"
 
 # for fedora(Stable)
 alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source --source'
@@ -25,7 +28,9 @@ alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source
 
 # Loading git-completion
 # for Fedora16
-source /usr/share/doc/git-1.7.7.6/contrib/completion/git-completion.bash
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+#source /usr/share/git-core/contrib/completion/git-completion.bash
+
 # for RHEL6
 #source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
 
@@ -44,14 +49,14 @@ if [[ ${EUID} -ne 0 ]] ; then
         # Gnome Off
         if [ $SHLVL = 2 ];then
             # CLI + screen
-            export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
+            #export PS1="\033k\033\\\\\033[36m\][\u@\h \W\$(__git_ps1)]$\[\033[0m\] "
+            export PS1="\[\033[36m\][\u@\h \[\033[0m\]\[\033[33m\]\W\[\033[0m\]\[\033[36m\]\$(__git_ps1)]$\[\033[0m\] "
         else
             # CLI + bash
             #export PS1="\[\033[36m\][\u@\h \W\$(__git_ps1)]\$\[\033[0m\] "
             export PS1="\[\033[36m\][\u@\h \[\033[0m\]\[\033[33m\]\W\[\033[0m\]\[\033[36m\]\$(__git_ps1)]$\[\033[0m\] "
         fi
     fi
-    PATH="$PATH":${HOME}/.cabal/bin
 else
     # root alias and PS1
     alias rm='rm -i'
@@ -81,3 +86,13 @@ export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
 #    # CLI + bash
 #    export PS1="\[\033[32m\][\u@\h \[\033[0m\]\[\033[33m\]\w\[\033[0m\]\[\033[32m\]\$(__git_ps1)]\[\033[0m\]\n$ "
 #fi
+alias cutemarked=LANG='ja_JP.utf-8 cutemarked'
+export LANG=ja_JP.utf-8
+export GDM_LANG=ja_JP.utf-8
+
+if [ "$TERM" = "xterm-256color" ] ; then
+  export LANG=en_US.utf-8
+fi
+
+alias docker='sudo docker'
+alias chown='sudo chown'
