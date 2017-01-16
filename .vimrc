@@ -298,8 +298,12 @@ match ZenkakuSpace /　/
 "autocmd BufWritePre * :%s/\t/  /ge
 
 " Enable mouse mode
-" set mouse=a
+"if has("mouse")
+    "set mouse=a
+    "set clipboard=unnamed,autoselect
+"endif
 " Disable mouse mode
 set mouse-=a
+
 " Enable mouse mode for screen
 " set ttymouse=xterm2

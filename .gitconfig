@@ -17,3 +17,6 @@
     ol = log --graph --decorate --oneline
     br = branch
     co = checkout
+    log-auther = shortlog -sne
+[push]
+    default = matching
