@@ -96,3 +96,4 @@ fi
 
 alias docker='sudo docker'
 alias chown='sudo chown'
+alias git-clean-branch='git fetch --prune $(git fetch -p)'
