@@ -16,24 +16,11 @@ alias yum='sudo dnf'
 alias systemctl='sudo systemctl'
 export EDITOR=vim
 
-# for fedora(Stable)
-alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-source --source'
-# for fedora(UnStable)
-#alias yumdownloader_src='yumdownloader --enablerepo=fedora-source,updates-testing-source --source'
-# for ScientificLinux with EPEL
-#alias yumdownloader_src='yumdownloader --enablerepo=epel-source,sl-source --source'
+# Loading git-completion
+source /usr/share/git-core/contrib/completion/git-prompt.sh
 
 # Normal User determine
 # PS1 setting
-
-# Loading git-completion
-# for Fedora16
-source /usr/share/git-core/contrib/completion/git-prompt.sh
-#source /usr/share/git-core/contrib/completion/git-completion.bash
-
-# for RHEL6
-#source /usr/share/doc/git-1.7.1/contrib/completion/git-completion.bash
-
 if [[ ${EUID} -ne 0 ]] ; then
     if [ "$GDMSESSION" = "gnome" ];then
         #  # Gnome On
@@ -65,27 +52,6 @@ else
     export PS1="\[\033[31m\][\u@\h \W]#\[\033[0m\] "
 fi
 
-# less color hilite
-export LESS='-R'
-export LESSOPEN='| /usr/bin/src-hilite-lesspipe.sh %s'
-
-# for cygwin setiings
-#alias ls='ls --color'
-#alias open='cygstart'
-#alias yum='/usr/bin/apt-cyg -u'
-#source  /etc/bash_completion.d/git
-#export PS1="\[\033[32m\][\u@\h \[\033[0m\]\[\033[33m\]\w\[\033[0m\]\[\033[32m\]\$(__git_ps1)]\[\033[0m\]\n$ "
-#export TERM=xterm-color
-#export PATH=$PATH:$HOME/bin
-
-# cygwin PS1 setting
-#if [ $SHLVL = 2 ];then
-#    # CLI + screen
-#    export PS1="\033k\033\\\\\033[32m\][\u@\h \w\$(__git_ps1)]\[\033[0m\]\n$ "
-#else
-#    # CLI + bash
-#    export PS1="\[\033[32m\][\u@\h \[\033[0m\]\[\033[33m\]\w\[\033[0m\]\[\033[32m\]\$(__git_ps1)]\[\033[0m\]\n$ "
-#fi
 alias cutemarked=LANG='ja_JP.utf-8 cutemarked'
 export LANG=ja_JP.utf-8
 export GDM_LANG=ja_JP.utf-8
@@ -94,6 +60,7 @@ if [ "$TERM" = "xterm-256color" ] ; then
   export LANG=en_US.utf-8
 fi
 
-alias docker='sudo docker'
+#alias docker='sudo docker'
 alias chown='sudo chown'
 alias git-clean-branch='git fetch --prune $(git fetch -p)'
+
