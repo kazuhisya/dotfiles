@@ -201,7 +201,6 @@ set tabstop=4 softtabstop=4 shiftwidth=4
 autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 au BufNewFile,BufRead *.md :set filetype=markdown
 au BufNewFile,BufRead Dockerfile* :set filetype=dockerfile
-au BufNewFile,BufRead *.spec.* :set filetype=spec
 
 " When Tab is driven in the blank at the head of line,
 " only the number of 'Shiftwidth' does the indent.
@@ -299,12 +298,8 @@ match ZenkakuSpace /　/
 "autocmd BufWritePre * :%s/\t/  /ge
 
 " Enable mouse mode
-"if has("mouse")
-    "set mouse=a
-    "set clipboard=unnamed,autoselect
-"endif
+" set mouse=a
 " Disable mouse mode
 set mouse-=a
-
 " Enable mouse mode for screen
 " set ttymouse=xterm2
