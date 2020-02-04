@@ -52,13 +52,18 @@ else
     export PS1="\[\033[31m\][\u@\h \W]#\[\033[0m\] "
 fi
 
-alias cutemarked=LANG='ja_JP.utf-8 cutemarked'
+# LANG
 export LANG=ja_JP.utf-8
 export GDM_LANG=ja_JP.utf-8
 
 if [ "$TERM" = "xterm-256color" ] ; then
   export LANG=en_US.utf-8
 fi
+
+# for IME
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
 
 #alias docker='sudo docker'
 alias chown='sudo chown'
