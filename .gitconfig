@@ -1,6 +1,9 @@
 [user]
     name = Kazuhisa Hara
     email = kazuhisya@gmail.com
+    #signingkey = XXXXXXXXXXXXXXXX
+[includeIf "gitdir:~/src/work/"]
+    path = ~/.gitconfig-work
 [color]
     ui = true
     diff = auto
@@ -21,3 +24,5 @@
     squash = rebase -i head~~
 [push]
     default = matching
+[gpg]
+    program = gpg

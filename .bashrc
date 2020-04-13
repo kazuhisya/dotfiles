@@ -65,7 +65,10 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
-#alias docker='sudo docker'
+# for Qt
+# https://www.enpass.io/support/kb/troubleshooting/enpass-looks-too-small-or-big-on-my-display-how-can-i-fix-it/
+export "QT_SCREEN_SCALE_FACTORS=1;1.5"
+
 alias chown='sudo chown'
 alias git-clean-branch='git fetch --prune $1 $(git fetch -p $1)'
 
