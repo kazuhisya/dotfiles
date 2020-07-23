@@ -26,3 +26,5 @@
     default = matching
 [gpg]
     program = gpg
+[credential]
+    helper = store --file ~/.git-credentials
