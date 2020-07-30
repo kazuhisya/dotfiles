@@ -72,3 +72,10 @@ export "QT_SCREEN_SCALE_FACTORS=1;1.5"
 alias chown='sudo chown'
 alias git-clean-branch='git fetch --prune $1 $(git fetch -p $1)'
 
+alias docker='podman'
+
+# PATH
+PATH=$PATH:$HOME/.local/bin:$HOME/bin
+
+export PATH
+
